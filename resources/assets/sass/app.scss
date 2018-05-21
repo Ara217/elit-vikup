@@ -1,14 +1,45 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Libraries
+@import "libs";
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// Styles
+@import "styles/global";
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  .navbar-custom {
+    height: 100px;
+    background-image: url('/images/Header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .marquee {
+    height: 23px;
+    background-color: white;
+  }
+
+  .main-block{
+    height: 750px;
+    background-image: url('/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer-custom {
+    height: 100px;
+    background-image: url('/images/Footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

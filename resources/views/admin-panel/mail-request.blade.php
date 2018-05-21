@@ -1,14 +1,9 @@
-@extends('layouts.app')
+@extends('auth.layout.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Mail-center</div>
-                <div class="card-body"></div>
-            </div>
+@section('admin-content')
+    <div class="row">
+        <div class="mx-auto col-md-7 bg-white text-center " style="height: 100px;">
+            <div>Mail-center</div>
         </div>
     </div>
-</div>
 @endsection
