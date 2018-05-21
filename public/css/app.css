@@ -13862,7 +13862,7 @@ img {
 }
 
 body .navbar-custom {
-  height: 100px;
+  height: 180px;
   background-image: url("/images/Header.png");
   background-repeat: no-repeat;
   background-size: cover;

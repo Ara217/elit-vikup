@@ -8,12 +8,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto"></ul>
+            {{--<ul class="navbar-nav mr-auto"></ul>--}}
+            <a href="/" class="mx-auto">
+                <img src="{{asset('images/logo-brand.png')}}" alt="">
+            </a>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul>
                 <!-- Authentication Links -->
                 @guest
                     <li><a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a></li>
