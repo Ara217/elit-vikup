@@ -30,14 +30,14 @@ class HomeController extends Controller
 
     public function getCallRequests()
     {
-        $calls = CallRequests::paginate(15);
+        $calls = CallRequests::paginate(10);
 
         return view('admin-panel.call-request', ['calls' => $calls]);
     }
 
     public function getMailRequests()
     {
-        $mails = MailRequest::paginate(15);
+        $mails = MailRequest::paginate(10);
 
         return view('admin-panel.mail-request', ['mails' => $mails]);
     }

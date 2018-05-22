@@ -158,10 +158,11 @@ window.axios.interceptors.response.use(function (response) {
 
     var errors = error.response.data;
     if (errors.errors) {
-        return errors.errors;
-        // _.each(errors.errors, (error) => {
-        //     toastr.error(error);
-        // })
+        _.each(errors.errors, function (error) {
+            toastr.error(error);
+        });
+
+        return errors;
     } else {
         toastr.error(errors.message);
     }
@@ -186,25 +187,25 @@ showErrors = function showErrors(form, errors) {
     });
 };
 
-handleFormSubmit = function handleFormSubmit(form, constraints) {
-    var values = validate.collectFormValues(form);
-    var errors = validate(values, constraints);
+// handleFormSubmit = (form, constraints) => {
+//     let values = validate.collectFormValues(form);
+//     let errors = validate(values, constraints);
+//
+//     if (!errors) {
+//         return values;
+//     } else {
+//         showErrors(form, errors);
+//         // _.each(errors, function (error) {
+//         //     toastr.error(error);
+//         // });
+//         loaderRemove();
+//         return false;
+//     }
+// };
 
-    if (!errors) {
-        return values;
-    } else {
-        showErrors(form, errors);
-        // _.each(errors, function (error) {
-        //     toastr.error(error);
-        // });
-        loaderRemove();
-        return false;
-    }
-};
-
-handleSingleField = function handleSingleField(element, constraints) {
-    return validate.single(element, constraints);
-};
+// handleSingleField = (element, constraints) => {
+//     return validate.single(element, constraints);
+// };
 
 event = function event($el, $type, $handler) {
     if ($el) {
@@ -216,53 +217,37 @@ event = function event($el, $type, $handler) {
 /* 15 */
 /***/ (function(module, exports) {
 
-var CHECKQUEUE = {
-    checked_email: {
-        presence: true,
-        email: true
-    }
-};
-
 $(function () {
-    $('#checkQueueNumber').on('submit', function (e) {
+    $('#sendEmail').on('submit', function (e) {
         e.preventDefault();
         var form = $(e.currentTarget);
-        var submitButton = form.find('input[type=submit]:disabled');
-        var values = handleFormSubmit(form, CHECKQUEUE);
+        var submitButton = form.find('input[type=submit]');
 
-        if (values) {
-            axios.post('/intl/check-queue-number', values).then(function (results) {
-                submitButton.prop("disabled", false);
-                if (results.errors) {
-                    errorsField.html(results.errors);
-                } else if (!results.success) {
-                    form.find("input[type=text], textarea").val("");
-                    form[0].reset();
-                } else if (results.success) {
-                    if (results.lists.length == 2) {
-                        window.location.href = '/intl/access-share';
-                    } else {
-                        if (results.lists.indexOf('wait') >= 0) {
-                            window.location.href = '/intl/early-access-share';
-                        } else {
-                            window.location.href = '/intl/privileged-access-share';
-                        }
-                    }
-                }
-            });
-        } else {
+        axios.post('/sendEmail', form.serialize()).then(function (results) {
             submitButton.prop("disabled", false);
-        }
+            form.find("input[type=text], textarea").val("");
+            form[0].reset();
+
+            if (!results.errors) {
+                toastr.success('Ваше письмо отправлено.');
+            }
+        });
     });
 
-    $('.access-link-share-button').on('click', function (e) {
-        var target = $(e.currentTarget);
+    $('#orderCall').on('submit', function (e) {
+        e.preventDefault();
+        var form = $(e.currentTarget);
+        var submitButton = form.find('input[type=submit]');
 
-        axios.post('/intl/add-network-share-count', {
-            list: target.data('list'),
-            socialNetwork: target.data('button'),
-            email: target.data('user')
-        }).then(function (results) {});
+        axios.post('/orderCall', form.serialize()).then(function (results) {
+            submitButton.prop("disabled", false);
+            form.find("input[type=text], textarea").val("");
+            form[0].reset();
+
+            if (!results.errors) {
+                toastr.success('Вы заказали звонок.');
+            }
+        });
     });
 });
 
@@ -270,124 +255,7 @@ $(function () {
 /* 16 */
 /***/ (function(module, exports) {
 
-var CHECKADDACCESSPASSFORM = {
-    email: {
-        presence: true,
-        email: true
-    },
-
-    passwords_count: {
-        presence: true,
-        numericality: true
-    },
-
-    days_number: {
-        presence: true,
-        numericality: true
-    }
-};
-
-var CHECHQUEUECONFIGFORM = {
-    queue_size: {
-        presence: true,
-        numericality: true
-    },
-
-    factor: {
-        presence: true,
-        numericality: true
-    },
-
-    range_from: {
-        presence: true,
-        numericality: true
-    },
-
-    range_to: {
-        presence: true,
-        numericality: true
-    },
-
-    list: {
-        presence: true
-    }
-};
-
-$(function () {
-    $('.image-element').on('change', function (e) {
-        var file = $(e.currentTarget).val();
-        // debugger;
-
-        $(e.currentTarget).next().html(file);
-    }); //todo add file name to input
-
-
-    $('.accept-request').on('click', function (e) {
-        var target = $(e.currentTarget).parent();
-
-        axios.post('/intl/admin/accept-join-request', { 'id': target.data('id') }).then(function (results) {
-            if (results.errors) {
-                errorsField.html(results.errors);
-            }
-
-            if (results.success) {
-                target.closest('tr').remove();
-            }
-        });
-    });
-
-    // $('.change-queue-number').on('click', (e) => {
-    //
-    // });
-
-    $('#addPassword').on('submit', function (e) {
-        e.preventDefault();
-        var form = $(e.currentTarget);
-        var submitButton = form.find('input[type=submit]:disabled');
-        var values = handleFormSubmit(form, CHECKADDACCESSPASSFORM);
-
-        if (values) {
-            axios.post('/intl/admin/add-pass', values).then(function (results) {
-                submitButton.prop('disabled', false);
-                if (results.errors) {
-                    errorsField.html(results.errors);
-                }
-
-                if (results.success) {
-                    form.find("input[type=text], textarea").val("");
-                    form.find('input[type=submit]').prop('disabled', false);
-                    form[0].reset();
-                    loaderRemove();
-                }
-            });
-        } else {
-            submitButton.prop('disabled', false);
-        }
-    });
-
-    $('.change-queue-configs').on('submit', function (e) {
-        e.preventDefault();
-        var form = $(e.currentTarget);
-        var submitButton = form.find('input[type=submit]:disabled');
-        var values = handleFormSubmit(form, CHECHQUEUECONFIGFORM);
-
-        if (values) {
-            axios.post('/intl/admin/change-queue-config', values).then(function (results) {
-                submitButton.prop('disabled', false);
-                if (results.errors) {
-                    errorsField.html(results.errors);
-                }
-
-                if (results.success) {
-                    form.find('input[type=submit]').prop('disabled', false);
-                    loaderRemove();
-                }
-            });
-        } else {
-            submitButton.prop('disabled', false);
-        }
-    });
-});
+$(function () {});
 
 /***/ }),
 /* 17 */

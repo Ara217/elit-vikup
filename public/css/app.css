@@ -13874,7 +13874,7 @@ body .marquee {
 }
 
 body .main-block {
-  height: 750px;
+  height: 804px;
   background-image: url("/images/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13885,5 +13885,13 @@ body .footer-custom {
   background-image: url("/images/Footer.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.h-805 {
+  height: 805px;
+}
+
+.form-bg {
+  background-color: #D9DCE1;
 }
 

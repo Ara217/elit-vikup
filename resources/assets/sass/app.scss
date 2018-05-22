@@ -29,8 +29,8 @@ body {
     background-color: white;
   }
 
-  .main-block{
-    height: 750px;
+  .main-block {
+    height: 804px;
     background-image: url('/images/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,4 +42,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.h-805 {
+  height: 805px;
+}
+.form-bg {
+   background-color: #D9DCE1;
 }

@@ -17,7 +17,7 @@ class CreateCallRequestsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('phoneNumber');
-            $table->string('drinkName');
+//            $table->string('drinkName')->nullable();
             $table->timestamps();
         });
     }

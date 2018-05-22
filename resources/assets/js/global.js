@@ -54,10 +54,12 @@ window.axios.interceptors.response.use((response) => {
 
     let errors = error.response.data;
     if(errors.errors) {
-        return errors.errors
-        // _.each(errors.errors, (error) => {
-        //     toastr.error(error);
-        // })
+        _.each(errors.errors, (error) => {
+            toastr.error(error);
+        });
+
+        return errors
+
     } else {
         toastr.error(errors.message);
     }
@@ -82,25 +84,25 @@ showErrors = (form, errors) => {
     });
 };
 
-handleFormSubmit = (form, constraints) => {
-    let values = validate.collectFormValues(form);
-    let errors = validate(values, constraints);
+// handleFormSubmit = (form, constraints) => {
+//     let values = validate.collectFormValues(form);
+//     let errors = validate(values, constraints);
+//
+//     if (!errors) {
+//         return values;
+//     } else {
+//         showErrors(form, errors);
+//         // _.each(errors, function (error) {
+//         //     toastr.error(error);
+//         // });
+//         loaderRemove();
+//         return false;
+//     }
+// };
 
-    if (!errors) {
-        return values;
-    } else {
-        showErrors(form, errors);
-        // _.each(errors, function (error) {
-        //     toastr.error(error);
-        // });
-        loaderRemove();
-        return false;
-    }
-};
-
-handleSingleField = (element, constraints) => {
-    return validate.single(element, constraints);
-};
+// handleSingleField = (element, constraints) => {
+//     return validate.single(element, constraints);
+// };
 
 event = ($el, $type, $handler) => {
     if($el) {
