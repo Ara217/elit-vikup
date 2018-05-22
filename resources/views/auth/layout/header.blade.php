@@ -4,9 +4,9 @@
             {{--<img src="{{asset('/images/fireplace-last.png')}}">--}}
         </div>
         <ul class="nav navbar-nav navbar-logo mx-auto">
-            <a href="/" class="mx-auto">
-                <img src="{{asset('images/logo-brand.png')}}">
-            </a>
+            {{--<a href="/" class="mx-auto">--}}
+                {{--<img src="{{asset('images/logo-brand.png')}}">--}}
+            {{--</a>--}}
         </ul>
         <ul class="nav navbar-nav pull-sm-right">
             @guest

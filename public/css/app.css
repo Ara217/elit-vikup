@@ -13862,7 +13862,7 @@ img {
 }
 
 body .navbar-custom {
-  height: 180px;
+  height: 220px;
   background-image: url("/images/Header.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13874,7 +13874,7 @@ body .marquee {
 }
 
 body .main-block {
-  height: 804px;
+  height: 1040px;
   background-image: url("/images/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13887,11 +13887,31 @@ body .footer-custom {
   background-size: cover;
 }
 
-.h-805 {
-  height: 805px;
+.h-1040 {
+  height: 1040px;
 }
 
 .form-bg {
   background-color: #D9DCE1;
+}
+
+.btn-bg {
+  background-color: #222938;
+  border-color: #222938;
+}
+
+.btn-bg:hover {
+  background-color: #D9DCE1;
+  border-color: #D9DCE1;
+}
+
+.btn-bg:active {
+  background-color: #D9DCE1;
+  border-color: #D9DCE1;
+}
+
+.btn-bg:focus {
+  background-color: #D9DCE1;
+  border-color: #D9DCE1;
 }
 

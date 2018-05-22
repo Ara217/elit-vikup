@@ -8,7 +8,7 @@
     </div>
     <main class="pb-4 main-block">
         <div class="row">
-            <div class="mx-auto col-md-7 bg-white h-805">
+            <div class="mx-auto col-md-7 bg-white h-1040">
                 <div class="container-fluid h-100">
                     <div class="row h-100">
                         @include('main.templates.left-side-bar')
@@ -21,9 +21,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="phoneNumber">Номер телефона:</label>
-                                    <input type="number" class="form-control" id="phoneNumber" placeholder="Номер телефона" name="phoneNumber">
+                                    <input type="text" class="form-control form-bg" id="phoneNumber" placeholder="Номер телефона" name="phoneNumber">
                                 </div>
-                                <input type="submit" class="btn btn-primary" value="Заказать" style="background-color: #222938">
+                                <input type="submit" class="btn btn-primary btn-bg" value="Заказать">
                             </form>
                         </main>
                     </div>

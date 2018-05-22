@@ -8,7 +8,7 @@
     </div>
     <main class="pb-4 main-block">
         <div class="row">
-            <div class="mx-auto col-md-7 bg-white h-805" >
+            <div class="mx-auto col-md-7 bg-white h-1040" >
                 <div class="container-fluid h-100">
                     <div class="row h-100">
                         @include('main.templates.left-side-bar')
@@ -27,7 +27,7 @@
                                     <label for="emailDescription">Текст:</label>
                                     <textarea class="form-control form-bg" id="emailDescription" name="description" rows="5">Введите ваш текст</textarea>
                                 </div>
-                                <input type="submit" class="btn btn-primary" value="Отправить" style="background-color: #222938">
+                                <input type="submit" class="btn btn-primary btn-bg" value="Отправить">
                             </form>
                         </main>
                     </div>

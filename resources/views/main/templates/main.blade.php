@@ -8,7 +8,7 @@
     </div>
     <main class="pb-4 main-block">
         <div class="row">
-            <div class="mx-auto col-md-7 bg-white text-center">
+            <div class="mx-auto col-md-7 bg-white h-1040">
                 <div class="container-fluid h-100">
                     <div class="row h-100">
                         @include('main.templates.left-side-bar')
