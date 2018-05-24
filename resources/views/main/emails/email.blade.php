@@ -1,8 +1,10 @@
 <h2>От {{$name}}</h2>
-<p>
+
+<h3>
     Отправител {{$email}}
-</p>
+</h3>
+
 <p>
-    {{$description}}
+    Текст: {{$description}}
 </p>
 

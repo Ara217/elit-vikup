@@ -24,12 +24,11 @@ class MainController extends Controller
 
 
 
-//        Mail::send('main.emails.email', $data, function($message) use ($data) {
-//            $message->to($data['email'], $data['name'])->subject('Письмо от клиента');
-//            $message->attach('C:\laravel-master\laravel\public\uploads\image.png');
-//            $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
-//            $message->from('elitevikup@gmail.com','Elite-vikup');
-//        });
+        Mail::send('main.emails.email', $data, function($message) use ($data) {
+            $message->to('elitevikup@gmail.com', $data['name'])->subject('Письмо от клиента');
+            $message->from($data['email'], 'Elite-vikup');
+            $message->replyTo($data['email'], $data['name']);
+        });
 
         $newMail = MailRequest::create($data);
 
