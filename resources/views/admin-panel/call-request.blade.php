@@ -2,7 +2,7 @@
 
 @section('admin-content')
     <div class="row">
-        <div class="mx-auto col-md-7 bg-white text-center">
+        <div class="mx-auto col-md-9 bg-white text-center">
             <div class="container-fluid h-100">
                 <div class="row h-100">
                     <main class="col bg-faded py-3">

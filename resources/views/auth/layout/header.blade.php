@@ -4,17 +4,17 @@
             {{--<img src="{{asset('/images/fireplace-last.png')}}">--}}
         </div>
         <ul class="nav navbar-nav navbar-logo mx-auto">
-            {{--<a href="/" class="mx-auto">--}}
-                {{--<img src="{{asset('images/logo-brand.png')}}">--}}
-            {{--</a>--}}
+            <a href="/admin" class="mx-auto">
+                <img src="{{asset('images/logo-brand.png')}}">
+            </a>
         </ul>
         <ul class="nav navbar-nav pull-sm-right">
             @guest
                 <li><a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                 <li><a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
-                <li><a class="nav-link text-white" href="{{ route('call-request') }}">Call Requests</a></li>
-                <li><a class="nav-link text-white" href="{{ route('mail-request') }}">Mail Requests</a></li>
+                <li><a class="nav-link text-white" href="{{ route('call-request') }}">Звонки</a></li>
+                <li><a class="nav-link text-white" href="{{ route('mail-request') }}">Письма</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-white" href="{{ route('logout') }}"
                        onclick="event.preventDefault();

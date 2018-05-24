@@ -38,7 +38,6 @@ class HomeController extends Controller
     public function getMailRequests()
     {
         $mails = MailRequest::paginate(10);
-
         return view('admin-panel.mail-request', ['mails' => $mails]);
     }
 }

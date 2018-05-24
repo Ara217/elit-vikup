@@ -24,6 +24,42 @@ Route::get('/sendEmail', function () {
     return view('main.templates.send-email');
 })->name('send-email');
 
+//pages
+Route::get('/brandy', function () {
+    return view('main.templates.pages.brandy');
+})->name('brandy');
+Route::get('/champagne', function () {
+    return view('main.templates.pages.champagne');
+})->name('champagne');
+Route::get('/cigarettes', function () {
+    return view('main.templates.pages.cigarettes');
+})->name('cigarettes');
+Route::get('/cigars', function () {
+    return view('main.templates.pages.cigars');
+})->name('cigars');
+Route::get('/cognac', function () {
+    return view('main.templates.pages.cognac');
+})->name('cognac');
+Route::get('/portWine', function () {
+    return view('main.templates.pages.portWine');
+})->name('portWine');
+Route::get('/rom', function () {
+    return view('main.templates.pages.rom');
+})->name('rom');
+Route::get('/tobacco', function () {
+    return view('main.templates.pages.tobacco');
+})->name('tobacco');
+Route::get('/vodka', function () {
+    return view('main.templates.pages.vodka');
+})->name('vodka');
+Route::get('/whiskey', function () {
+    return view('main.templates.pages.whiskey');
+})->name('whiskey');
+Route::get('/wine', function () {
+    return view('main.templates.pages.wine');
+})->name('wine');
+//pages
+
 
 Auth::routes();
 

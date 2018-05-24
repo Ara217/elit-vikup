@@ -11,7 +11,7 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('main.templates.main');
+        return view('main.templates.pages.alcohole');
     }
 
     public function sendEmail(Request $request)
@@ -24,12 +24,12 @@ class MainController extends Controller
 
 
 
-        Mail::send('main.emails.email', $data, function($message) use ($data) {
-            $message->to($data['email'], $data['name'])->subject('Письмо от клиента');
+//        Mail::send('main.emails.email', $data, function($message) use ($data) {
+//            $message->to($data['email'], $data['name'])->subject('Письмо от клиента');
 //            $message->attach('C:\laravel-master\laravel\public\uploads\image.png');
 //            $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
-            $message->from('elitevikup@gmail.com','Elite-vikup');
-        });
+//            $message->from('elitevikup@gmail.com','Elite-vikup');
+//        });
 
         $newMail = MailRequest::create($data);
 
