@@ -126,17 +126,17 @@ $(function () {
         var submit = $(e.target).find('input[type="submit"]');
         submit.prop('disabled', true);
 
-        if (!submit.next().length) {
-            var loader = $('<img src="/images/loader.gif" class="loader-animation" width="30px" style="display:none">');
-            loader.insertAfter(submit);
-            loader.show('normal');
-        }
+        // if (!submit.next().length) {
+        //     const loader = $('<img src="/images/loader.gif" class="loader-animation" width="30px" style="display:none">');
+        //     loader.insertAfter(submit);
+        //     loader.show('normal');
+        // }
     });
 });
 
 // setup axios response
 window.axios.interceptors.response.use(function (response) {
-    loaderRemove();
+    // loaderRemove();
 
     if (response.data.success) {
         if (response.data.message) {
@@ -154,7 +154,7 @@ window.axios.interceptors.response.use(function (response) {
 
     return response.data;
 }, function (error) {
-    loaderRemove();
+    // loaderRemove();
 
     var errors = error.response.data;
     if (errors.errors) {
@@ -168,12 +168,12 @@ window.axios.interceptors.response.use(function (response) {
     }
 });
 
-loaderRemove = function loaderRemove() {
-    var loader = $('img.loader-animation');
-    loader.hide('normal');
-    loader.siblings('button').prop('disabled', false);
-    loader.remove();
-};
+// loaderRemove = () => {
+//     const loader = $('img.loader-animation');
+//     loader.hide('normal');
+//     loader.siblings('button').prop('disabled', false);
+//     loader.remove();
+// };
 
 showErrors = function showErrors(form, errors) {
     form.find(':input').nextAll('p').remove();

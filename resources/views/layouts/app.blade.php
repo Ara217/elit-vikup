@@ -8,8 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Elite-vikup') }}</title>
-
+    <title>@yield('title')</title>
+    <meta name="description" content="Продать алкоголь и табак на территории Москвы и области.Наш сайт предлагает вам возможность продавать дешевые и дорогие алкогольные напитки а также табак.Мы покупаем вино, ром, водка, бренди, виски, шампанское и многое другое.Мы покупаем табак, сигареты, сигары.">
+    <meta name="keywords" content="продажа алкоголя, продажа тобака,покупка табака, покупка алкоголя">
     <!-- Scripts -->
     <script src="{{ asset('js/libs.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>

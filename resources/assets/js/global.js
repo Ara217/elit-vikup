@@ -22,17 +22,17 @@ $(() => {
         const submit = $(e.target).find('input[type="submit"]');
         submit.prop('disabled', true);
 
-        if (!submit.next().length) {
-            const loader = $('<img src="/images/loader.gif" class="loader-animation" width="30px" style="display:none">');
-            loader.insertAfter(submit);
-            loader.show('normal');
-        }
+        // if (!submit.next().length) {
+        //     const loader = $('<img src="/images/loader.gif" class="loader-animation" width="30px" style="display:none">');
+        //     loader.insertAfter(submit);
+        //     loader.show('normal');
+        // }
     });
 });
 
 // setup axios response
 window.axios.interceptors.response.use((response) => {
-    loaderRemove();
+    // loaderRemove();
 
     if(response.data.success) {
         if(response.data.message) {
@@ -50,7 +50,7 @@ window.axios.interceptors.response.use((response) => {
 
     return response.data;
 }, (error) => {
-    loaderRemove();
+    // loaderRemove();
 
     let errors = error.response.data;
     if(errors.errors) {
@@ -65,12 +65,12 @@ window.axios.interceptors.response.use((response) => {
     }
 });
 
-loaderRemove = () => {
-    const loader = $('img.loader-animation');
-    loader.hide('normal');
-    loader.siblings('button').prop('disabled', false);
-    loader.remove();
-};
+// loaderRemove = () => {
+//     const loader = $('img.loader-animation');
+//     loader.hide('normal');
+//     loader.siblings('button').prop('disabled', false);
+//     loader.remove();
+// };
 
 showErrors = (form, errors) => {
     form.find(':input').nextAll('p').remove();

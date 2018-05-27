@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Заказать звонок')
 
 @section('content')
     <div class="col-md-12 marquee">
