@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-md-12 marquee">
         <marquee behavior="alternate" direction="left" bgcolor="white">
-            Lorem ipsum dolor sit amet...
+            Покупаем элитный алкоголь по самым высоким ценам.
         </marquee>
     </div>
     <main class="pb-4 main-block">
