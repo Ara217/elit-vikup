@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/aboutUs', function () {
     return view('main.templates.about-us');
 })->name('about-us');
@@ -60,12 +62,10 @@ Route::get('/wine', function () {
 })->name('wine');
 //pages
 
-
-Auth::routes();
-
 Route::get('/', 'MainController@index');
 Route::post('/sendEmail', 'MainController@sendEmail');
 Route::post('/orderCall', 'MainController@orderCall');
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/admin/call-request', 'HomeController@getCallRequests')->name('call-request');
 Route::get('/admin/mail-request', 'HomeController@getMailRequests')->name('mail-request');
+Route::post('/logout','Auth\LoginController@logout')->name('logout');

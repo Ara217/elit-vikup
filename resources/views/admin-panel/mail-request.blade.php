@@ -24,7 +24,7 @@
             <div class="container-fluid ">
                 <div class="row ">
                     <main class="col bg-faded py-3">
-                        <h3>Звонки</h3>
+                        <h3>Письма</h3>
                         <table class="table">
                             <thead>
                             <tr>
