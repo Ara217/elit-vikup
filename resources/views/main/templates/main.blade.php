@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-md-12 marquee">
-        <marquee behavior="alternate" direction="left" bgcolor="white">
+        <marquee behavior="scroll" direction="left" bgcolor="white">
             Покупаем элитный алкоголь по самым высоким ценам.
         </marquee>
     </div>
