@@ -14,7 +14,7 @@
                 <li><a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
                 <li><a class="nav-link text-white" href="{{ route('call-request') }}">Звонки</a></li>
-                <li><a class="nav-link text-white" href="{{ route('mail-request') }}">Письма</a></li>
+                {{--<li><a class="nav-link text-white" href="{{ route('mail-request') }}">Письма</a></li>--}}
                 <li class="nav-item dropdown">
                     <a class="nav-link text-white" href="{{ route('logout') }}"
                        onclick="event.preventDefault();

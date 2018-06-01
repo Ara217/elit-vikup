@@ -8,7 +8,7 @@
         </marquee>
     </div>
     <main class="main-block">
-        <div class="row">
+        <div class="row content-block">
             <div class="mx-auto col-md-7 bg-white">
                 <div class="container-fluid ">
                     <div class="row ">

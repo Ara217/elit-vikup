@@ -13921,8 +13921,18 @@ body .footer-custom {
 }
 
 @media only screen and (max-width: 855px) {
-  .left-side-bar {
+  body .left-side-bar {
     display: none;
+  }
+
+  body .content-block {
+    min-height: 450px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body .main-block {
+    background-image: none;
   }
 }
 

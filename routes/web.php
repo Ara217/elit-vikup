@@ -67,5 +67,5 @@ Route::post('/sendEmail', 'MainController@sendEmail');
 Route::post('/orderCall', 'MainController@orderCall');
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/admin/call-request', 'HomeController@getCallRequests')->name('call-request');
-Route::get('/admin/mail-request', 'HomeController@getMailRequests')->name('mail-request');
+//Route::get('/admin/mail-request', 'HomeController@getMailRequests')->name('mail-request');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
