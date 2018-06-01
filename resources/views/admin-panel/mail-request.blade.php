@@ -6,7 +6,7 @@
             <div class="container-fluid h-100">
                 <div class="row h-100">
                     <main class="col bg-faded py-3">
-                        <h3>Звонки</h3>
+                        <h3>Письма</h3>
                         <table class="table">
                             <thead>
                             <tr>
