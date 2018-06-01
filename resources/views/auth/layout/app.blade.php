@@ -20,12 +20,11 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     </head>
     <body>
-        <div>
+        <div class="container-fluid">
             @include('auth.layout.header')
-            <main class="pb-4 main-block">
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content{{--pb-4 main-block--}}" role="main">
                 @yield('admin-content')
             </main>
             @include('auth.layout.footer')

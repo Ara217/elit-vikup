@@ -3,8 +3,8 @@
 @section('admin-content')
     <div class="row">
         <div class="mx-auto col-md-9 bg-white text-center">
-            <div class="container-fluid h-100">
-                <div class="row h-100">
+            <div class="container-fluid ">
+                <div class="row ">
                     <main class="col bg-faded py-3">
                         <h3>Звонки</h3>
                         <table class="table">

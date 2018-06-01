@@ -30,7 +30,6 @@ body {
   }
 
   .main-block {
-    height: 1040px;
     background-image: url('/images/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,5 +64,21 @@ body {
   &:focus {
     background-color: #D9DCE1;
     border-color: #D9DCE1;
+  }
+}
+
+@media only screen and (max-width : 1021px) {
+  .header-logo {
+    display: none;
+  }
+  .left-side-bar{
+
+  }
+}
+
+
+@media only screen and (max-width : 855px) {
+  .left-side-bar{
+    display: none;
   }
 }

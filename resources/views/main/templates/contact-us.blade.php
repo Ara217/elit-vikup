@@ -7,11 +7,11 @@
             Покупаем элитный алкоголь по самым высоким ценам.
         </marquee>
     </div>
-    <main class="pb-4 main-block">
+    <main class="main-block">
         <div class="row">
-            <div class="mx-auto col-md-7 bg-white {{--text-center--}} h-1040" >
-                <div class="container-fluid h-100">
-                    <div class="row h-100">
+            <div class="mx-auto col-md-7 bg-white {{--text-center--}}" >
+                <div class="container-fluid ">
+                    <div class="row ">
                         @include('main.templates.left-side-bar')
                         <main class="col bg-faded py-3">
                             Связ с нами
