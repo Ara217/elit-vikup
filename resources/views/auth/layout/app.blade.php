@@ -23,11 +23,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid">
+        <div>
             @include('auth.layout.header')
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content{{--pb-4 main-block--}}" role="main">
                 @yield('admin-content')
-            </main>
             @include('auth.layout.footer')
         </div>
     </body>

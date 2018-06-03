@@ -25,10 +25,10 @@
 
 </head>
 <body>
-    {{--<div>--}}
+    <div>
         @include('layouts.header')
             @yield('content')
         @include('layouts.footer')
-    {{--</div>--}}
+    </div>
 </body>
 </html>

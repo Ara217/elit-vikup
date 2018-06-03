@@ -8,10 +8,13 @@
     <main class="main-block">
         <div class="row content-block">
             <div class="mx-auto col-md-7 bg-white" >
-                <div class="container-fluid ">
-                    <div class="row ">
-                        @include('main.templates.left-side-bar')
-                        <main class="col bg-faded py-3">
+                <div class="wrapper">
+                    <!-- Sidebar Holder -->
+                @include('main.templates.left-side-bar')
+                <!-- Page Content Holder -->
+                    <div id="content" class="w-100">
+                        @include('main.templates.menu-button')
+                        <div class="col bg-faded py-3">
                             <form id="sendEmail">
                                 <h3>Отправить Е-mail</h3>
                                 <div class="form-group">
@@ -28,7 +31,7 @@
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-bg" value="Отправить">
                             </form>
-                        </main>
+                        </div>
                     </div>
                 </div>
             </div>

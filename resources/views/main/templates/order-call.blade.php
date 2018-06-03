@@ -8,10 +8,13 @@
     <main class="main-block">
         <div class="row content-block">
             <div class="mx-auto col-md-7 bg-white">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        @include('main.templates.left-side-bar')
-                        <main class="col bg-faded py-3">
+                <div class="wrapper">
+                    <!-- Sidebar Holder -->
+                @include('main.templates.left-side-bar')
+                <!-- Page Content Holder -->
+                    <div id="content" class="w-100">
+                        @include('main.templates.menu-button')
+                        <div>
                             <form id="orderCall">
                                 <h3>Заказать звонок</h3>
                                 <div class="form-group">
@@ -24,7 +27,7 @@
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-bg" value="Заказать">
                             </form>
-                        </main>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,12 +8,15 @@
     <main class="main-block">
         <div class="row content-block">
             <div class="mx-auto col-md-7 bg-white {{--text-center--}}">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        @include('main.templates.left-side-bar')
-                        <main class="col bg-faded py-3">
-                            О нас
-                        </main>
+                <div class="wrapper">
+                    <!-- Sidebar Holder -->
+                @include('main.templates.left-side-bar')
+                <!-- Page Content Holder -->
+                    <div id="content">
+                        @include('main.templates.menu-button')
+                        <div>
+                            <h3>О нас</h3>
+                        </div>
                     </div>
                 </div>
             </div>

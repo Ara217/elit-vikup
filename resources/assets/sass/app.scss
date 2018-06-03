@@ -16,31 +16,29 @@ img {
   height: auto;
 }
 
-body {
-  .navbar-custom {
-    height: 220px;
-    background-image: url('/images/Header.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.navbar-custom {
+  height: 220px;
+  background-image: url('/images/Header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .marquee {
-    height: 23px;
-    background-color: white;
-  }
+.marquee {
+  height: 23px;
+  background-color: white;
+}
 
-  .main-block {
-    background-image: url('/images/Background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.main-block {
+  background-image: url('/images/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .footer-custom {
-    height: 100px;
-    background-image: url('/images/Footer.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.footer-custom {
+  height: 100px;
+  background-image: url('/images/Footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .h-1040 {
@@ -73,25 +71,160 @@ body {
   }
 }
 
-
-@media only screen and (max-width : 990px) {
-
-  body{
-    .left-side-bar{
-      display: none;
-    }
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
 }
 
-@media only screen and (max-width : 855px) {
-
-  body{
-    .content-block {
-      min-height: 450px;
-    }
-  }
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #222938;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #222938;
+  color: #4f5561;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: #999;
+}
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386D5;
+}
+
+a.article, a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
 
 @media only screen and (max-width : 1100px) {
   body {
@@ -100,3 +233,30 @@ body {
     }
   }
 }
+
+@media only screen and (min-width : 768px) {
+  #sidebarCollapse {
+    display: none;
+  }
+}
+
+
+//@media only screen and (max-width : 990px) {
+//
+//  body{
+//    .left-side-bar{
+//      display: none;
+//    }
+//  }
+//}
+
+//@media only screen and (max-width : 855px) {
+//
+//  body{
+//    .content-block {
+//      min-height: 450px;
+//    }
+//  }
+//}
+//
+//
