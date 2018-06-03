@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Elite-vikup') }}</title>
+        <title>{{ config('app.name', 'Элит-Выкуп') }}</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/libs.js') }}"></script>
@@ -17,6 +17,7 @@
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="{{{ asset('images/Logo.png') }}}" type="image/x-icon">
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">

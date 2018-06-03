@@ -25,7 +25,7 @@ class MainController extends Controller
 
         Mail::send('main.emails.message-email', $data, function($message) use ($data) {
             $message->to('elitevikup@gmail.com', $data['name'])->subject('Письмо от клиента');
-            $message->from($data['email'], 'Elite-vikup');
+            $message->from($data['email'], 'Элит-Выкуп');
             $message->replyTo($data['email'], $data['name']);
         });
 
@@ -45,7 +45,7 @@ class MainController extends Controller
 
         Mail::send('main.emails.call-request-email', $data, function($message) use ($data) {
             $message->to('elitevikup@gmail.com', $data['name'])->subject('Заказ на звонок');
-            $message->from('elitevikup@gmail.com', 'Elite-vikup');
+            $message->from('elitevikup@gmail.com', 'Элит-Выкуп');
         });
 
         $newCall = CallRequests::create($data);

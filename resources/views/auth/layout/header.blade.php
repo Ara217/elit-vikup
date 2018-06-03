@@ -5,13 +5,13 @@
         </div>
         <ul class="nav navbar-nav navbar-logo mx-auto">
             <a href="/admin" class="mx-auto">
-                <img src="{{asset('images/logo-brand.png')}}">
+                <img src="{{asset('images/ruseren-logo2.png')}}">
             </a>
         </ul>
         <ul class="nav navbar-nav pull-sm-right">
             @guest
                 <li><a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                <li><a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                {{--<li><a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a></li>--}}
             @else
                 <li><a class="nav-link text-white" href="{{ route('call-request') }}">Звонки</a></li>
                 {{--<li><a class="nav-link text-white" href="{{ route('mail-request') }}">Письма</a></li>--}}

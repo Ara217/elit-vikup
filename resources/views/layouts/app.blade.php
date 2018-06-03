@@ -9,8 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-    <meta name="description" content="Продать алкоголь и табак на территории Москвы и области.Наш сайт предлагает вам возможность продавать дешевые и дорогие алкогольные напитки а также табак.Мы покупаем вино, ром, водка, бренди, виски, шампанское и многое другое.Мы покупаем табак, сигареты, сигары.">
-    <meta name="keywords" content="продажа алкоголя, продажа тобака,покупка табака, покупка алкоголя">
+    <meta name="description" content="Скупка элитного алкоголя на территории Москвы и области.Скупка табака на территории Москвы и области.Купим вино, ром, водка, бренди, виски, шампанское и многое другое.Купим табак, сигареты, сигары.Наш сайт предлагает вам возможность продавать дорогие алкогольные напитки а также табак.Оплата сразу.">
+    <meta name="keywords" content="Скупка элитного алкоголя, Скупка табака, вино, ром, водка, бренди, виски, шампанское, табак, сигареты, сигары">
     <!-- Scripts -->
     <script src="{{ asset('js/libs.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
@@ -18,16 +18,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{{{ asset('images/Logo.png') }}}" type="image/x-icon">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
 <body>
-    <div>
+    {{--<div>--}}
         @include('layouts.header')
             @yield('content')
         @include('layouts.footer')
-    </div>
+    {{--</div>--}}
 </body>
 </html>

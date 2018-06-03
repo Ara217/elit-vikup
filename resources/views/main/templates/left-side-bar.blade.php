@@ -3,7 +3,7 @@
         <div class="collapse navbar-collapse">
             <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
                 <li class="nav-item">
-                    <h5 class="font-weight-bold" style="color: #4f5561">ВЫКУП АЛКОГОЛЯ</h5>
+                    <h4 class="font-weight-bold" style="color: #4f5561">ВЫКУП АЛКОГОЛЯ</h4>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pl-0" href="/">
@@ -53,7 +53,7 @@
                 </li>
                 {{--ТАБАК--}}
                 <li class="nav-item">
-                    <h5 class="font-weight-bold" style="color: #4f5561">ВЫКУП ТАБАКА</h5>
+                    <h4 class="font-weight-bold" style="color: #4f5561">ВЫКУП ТАБАКА</h4>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pl-0" href="{{url('tobacco')}}">

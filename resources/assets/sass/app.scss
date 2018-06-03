@@ -74,12 +74,18 @@ body {
 }
 
 
-@media only screen and (max-width : 855px) {
+@media only screen and (max-width : 990px) {
 
   body{
     .left-side-bar{
       display: none;
     }
+  }
+}
+
+@media only screen and (max-width : 855px) {
+
+  body{
     .content-block {
       min-height: 450px;
     }
