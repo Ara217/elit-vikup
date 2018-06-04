@@ -3,7 +3,7 @@
         <div class="nav navbar-nav pull-sm-left">
             {{--<img src="{{asset('/images/fireplace-last.png')}}">--}}
         </div>
-        <ul class="nav navbar-nav navbar-logo mx-auto">
+        <ul class="nav navbar-nav navbar-logo mx-auto logo-block">
             <a href="/admin" class="mx-auto">
                 <img src="{{asset('images/ruseren-logo2.png')}}" class="logo-img">
             </a>
