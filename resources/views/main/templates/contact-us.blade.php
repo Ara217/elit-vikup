@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Связ с нами')
+@section('title', 'Связ с нами - elitvikup.com')
 
 @section('content')
     <div class="col-md-12 marquee">

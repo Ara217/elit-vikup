@@ -3,7 +3,7 @@
         <div class="header-logo">
             <img src="{{asset('/images/fireplace-2.png')}}">
         </div>
-        <ul class="nav navbar-nav navbar-logo mx-auto">
+        <ul class="nav navbar-nav navbar-logo mx-auto logo-block">
             <a href="/" class="mx-auto">
                 <img src="{{asset('images/ruseren-logo2.png')}}" class="logo-img">
             </a>

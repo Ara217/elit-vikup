@@ -1,5 +1,5 @@
 @extends('main.templates.main')
-@section('title', 'Элит-Выкуп - Продать портвейн')
+@section('title', 'Продать портвейн  - elitvikup.com')
 
 @section('drink_content')
     <div>
