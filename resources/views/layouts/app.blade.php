@@ -27,10 +27,9 @@
 
 </head>
 <body>
-    <div>
-        @include('layouts.header')
-            @yield('content')
-        @include('layouts.footer')
-    </div>
+    {{--<img src="{{asset('images/Background.png')}}">--}}
+    @include('layouts.header')
+        @yield('content')
+    @include('layouts.footer')
 </body>
 </html>

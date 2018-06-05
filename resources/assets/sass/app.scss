@@ -30,8 +30,10 @@ img {
 
 .main-block {
   background-image: url('/images/Background.png');
-  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .footer-custom {
@@ -41,9 +43,6 @@ img {
   background-size: cover;
 }
 
-.h-1040 {
-  height: 1040px;
-}
 .form-bg {
    background-color: #D9DCE1;
 }
@@ -72,8 +71,8 @@ img {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #fafafa;
+  position: relative;
+  color: white;
 }
 
 p {
