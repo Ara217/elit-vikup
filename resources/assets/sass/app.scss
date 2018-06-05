@@ -30,10 +30,13 @@ img {
 
 .main-block {
   background-image: url('/images/Background.png');
-  background-size: cover;
-  background-position: center center;
+  //background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .footer-custom {

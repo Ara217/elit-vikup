@@ -13875,10 +13875,9 @@ img {
 
 .main-block {
   background-image: url("/images/Background.png");
-  background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .footer-custom {
