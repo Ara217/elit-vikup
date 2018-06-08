@@ -15,14 +15,14 @@ Auth::routes();
 
 Route::get('/about-Us', function () {
     return view('main.templates.about-us');
-})->name('about-us');
-Route::get('/contact-Us', function () {
+})->name('about');
+Route::get('/contact', function () {
     return view('main.templates.contact-us');
 })->name('contact-us');
-Route::get('/order-Call', function () {
+Route::get('/call', function () {
     return view('main.templates.order-call');
 })->name('order-call');
-Route::get('/send-Email', function () {
+Route::get('/email', function () {
     return view('main.templates.send-email');
 })->name('send-email');
 
