@@ -13922,6 +13922,13 @@ body {
   color: white;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  color: #4f5561 !important;
+}
+
 p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1em;
