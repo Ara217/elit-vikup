@@ -13,16 +13,16 @@
 
 Auth::routes();
 
-Route::get('/about-Us', function () {
+Route::get('/about', function () {
     return view('main.templates.about-us');
-})->name('about');
+})->name('about-us');
 Route::get('/contact', function () {
     return view('main.templates.contact-us');
 })->name('contact-us');
-Route::get('/call', function () {
+Route::get('/Call', function () {
     return view('main.templates.order-call');
 })->name('order-call');
-Route::get('/email', function () {
+Route::get('/send-Email', function () {
     return view('main.templates.send-email');
 })->name('send-email');
 
