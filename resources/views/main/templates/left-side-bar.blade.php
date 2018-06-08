@@ -38,7 +38,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link pl-0" href="/portWine">
+            <a class="nav-link pl-0" href="/portwine">
                 <span class="d-md-inline">Продать портвейн</span>
             </a>
         </li>

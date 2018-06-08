@@ -19,10 +19,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('main.templates.contact-us');
 })->name('contact-us');
-Route::get('/Call', function () {
+Route::get('/order-call', function () {
     return view('main.templates.order-call');
 })->name('order-call');
-Route::get('/send-Email', function () {
+Route::get('/send-email', function () {
     return view('main.templates.send-email');
 })->name('send-email');
 
@@ -42,7 +42,7 @@ Route::get('/cigars', function () {
 Route::get('/cognac', function () {
     return view('main.templates.pages.cognac');
 })->name('cognac');
-Route::get('/portWine', function () {
+Route::get('/portwine', function () {
     return view('main.templates.pages.portWine');
 })->name('portWine');
 Route::get('/rom', function () {
