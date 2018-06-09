@@ -16,7 +16,7 @@
                         @include('main.templates.menu-button')
                         <div>
                             <form id="orderCall">
-                                <h3>Заказать звонок</h3>
+                                <h2>Заказать звонок</h2>
                                 <div class="form-group">
                                     <label for="username">Ваше имя:</label>
                                     <input type="text" class="form-control form-bg" id="username" placeholder="Ваше имя" name="name">

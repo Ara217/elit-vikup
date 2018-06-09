@@ -16,7 +16,7 @@
                         @include('main.templates.menu-button')
                         <div class="col bg-faded py-3">
                             <form id="sendEmail">
-                                <h3>Отправить Е-mail</h3>
+                                <h2>Отправить Е-mail</h2>
                                 <div class="form-group">
                                     <label for="username">Ваше имя:</label>
                                     <input type="text" class="form-control form-bg" id="username" placeholder="Ваше имя" name="name">

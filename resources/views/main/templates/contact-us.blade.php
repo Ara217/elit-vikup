@@ -12,7 +12,7 @@
                     <div class="row ">
                         @include('main.templates.left-side-bar')
                         <main class="col bg-faded py-3">
-                            Связ с нами
+                            <h2>Связ с нами</h2>
                         </main>
                     </div>
                 </div>
