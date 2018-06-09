@@ -69,3 +69,11 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/admin/call-request', 'HomeController@getCallRequests')->name('call-request');
 //Route::get('/admin/mail-request', 'HomeController@getMailRequests')->name('mail-request');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
+
+
+//site map
+
+Route::get('/sitemap',function(){
+    return response()->view('sitemap.sitemap')
+        ->header('Content-Type', 'xml');
+});
