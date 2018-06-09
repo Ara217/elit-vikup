@@ -4,7 +4,7 @@
     </div>
     <ul class="list-unstyled components pl-2">
         <li class="nav-item">
-            <h4 class="font-weight-bold" style="color: #4f5561">ВЫКУП АЛКОГОЛЯ</h4>
+            <h4 class="font-weight-bold sidebarHeader">ВЫКУП АЛКОГОЛЯ</h4>
         </li>
         <li class="nav-item">
             <a class="nav-link pl-0" href="/">
@@ -54,7 +54,7 @@
         </li>
         {{--ТАБАК--}}
         <li class="nav-item">
-            <h4 class="font-weight-bold" style="color: #4f5561">ВЫКУП ТАБАКА</h4>
+            <h4 class="font-weight-bold sidebarHeader">ВЫКУП ТАБАКА</h4>
         </li>
         <li class="nav-item">
             <a class="nav-link pl-0" href="/tobacco">

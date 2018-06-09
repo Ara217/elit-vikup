@@ -5,7 +5,7 @@
         </div>
         <ul class="nav navbar-nav navbar-logo mx-auto logo-block">
             <a href="/admin" class="mx-auto">
-                <img src="{{asset('images/ruseren-logo2.png')}}" class="logo-img">
+                <img src="{{asset('images/ruseren-logo2.png')}}" class="logo-img" alt="Элит выкуп">
             </a>
         </ul>
         <ul class="nav navbar-nav pull-sm-right">

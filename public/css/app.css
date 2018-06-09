@@ -13911,12 +13911,6 @@ img {
   border-color: #D9DCE1;
 }
 
-@media only screen and (max-width: 1021px) {
-  .header-logo {
-    display: none;
-  }
-}
-
 body {
   position: relative;
   color: white;
@@ -13936,6 +13930,14 @@ p {
   font-weight: 300;
   line-height: 1.7em;
   color: #999;
+}
+
+marquee {
+  color: red;
+}
+
+.sidebarHeader {
+  color: #4f5561;
 }
 
 a,
@@ -13959,6 +13961,10 @@ a:focus {
   height: 1px;
   border-bottom: 1px dashed #ddd;
   margin: 40px 0;
+}
+
+.collapse-btn {
+  background: #222938;
 }
 
 /* ---------------------------------------------------
@@ -14115,6 +14121,12 @@ a.article:hover {
 
   .logo-img {
     width: 130px;
+  }
+}
+
+@media only screen and (max-width: 1021px) {
+  .header-logo {
+    display: none;
   }
 }
 
